@@ -178,6 +178,34 @@ public class Arduino {
     }
 
     /**
+     * Returns a string array containing as many readings as the value of limit.
+     * This method can be use, wen you wont to have data package with split data.
+     *
+     * @param limit limits of bytes witch do you wont to read from serial port
+     * @return input bytes in String array
+     */
+    public String[] arraySerialRead(final int limit){
+        //in case of unlimited incoming data, set a limit for number of readings
+        comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
+        String[] out = new String[limit];
+
+        int count = 0;
+        Scanner in = new Scanner(comPort.getInputStream());
+
+        try
+        {
+            while(count <= limit && in.hasNext()) {
+                out[count] += (in.next());
+                count++;
+            }
+            in.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return out;
+    }
+
+    /**
      * Writes the contents of the entire string to the serial at once. Written as string to serial.
      *
      * @param s output String value
