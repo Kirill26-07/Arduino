@@ -1,56 +1,26 @@
-package com.arduinoSerialJ;
-
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
-
-class ArduinoTest {
-
-    @Test
-    void openConnection() {
-    }
-
-    @Test
-    void closeConnection() {
-    }
-
-    @Test
-    void setPortDescription() {
-    }
-
-    @Test
-    void setBaudRate() {
-    }
-
-    @Test
-    void getPortDescription() {
-    }
-
-    @Test
-    void getSerialPort() {
-    }
-
-    @Test
-    void serialRead() {
-    }
-
-    @Test
-    void serialRead1() {
-    }
-
-    @Test
-    void serialWrite() {
-    }
-
-    @Test
-    void serialWrite1() {
-    }
-
-    @Test
-    void serialWrite2() {
-    }
-
-    @Test
-    void serialWrite3() {
-    }
-}
+//package com.arduinoSerialJ;
+//
+//import org.junit.Rule;
+//import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
+//import org.junit.jupiter.api.Test;
+//import static org.junit.contrib.java.lang.system.TextFromStandardInputStream.emptyStandardInputStream;
+//import static org.junit.jupiter.api.Assertions.*;
+//
+//class ArduinoTest {
+//
+//    private Arduino testInput = new Arduino();
+//    private String [] testArray = new String[] {"1", "2", "3"};
+//
+//    @Rule
+//    public final TextFromStandardInputStream systemInMock
+//            = emptyStandardInputStream();
+//
+//    @Test
+//    void arraySerialReadTest() {
+//
+//        systemInMock.provideLines("1", "2", "3");
+//
+//       assertArrayEquals(testArray, testInput.arraySerialRead(2));
+//
+//    }
+//}
