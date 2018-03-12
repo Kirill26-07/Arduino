@@ -187,7 +187,7 @@ public class Arduino {
     public String[] arraySerialRead(final int limit){
         //in case of unlimited incoming data, set a limit for number of readings
         comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
-        String[] out = new String[limit];
+        String[] out = new String[limit + 1];
 
         int count = 0;
         Scanner in = new Scanner(comPort.getInputStream());
@@ -214,7 +214,7 @@ public class Arduino {
      */
     public byte[] bytesSerialRead(final int limit){
         comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
-        byte[] out = new byte[limit];
+        byte[] out = new byte[limit + 1];
 
         int count = 0;
         Scanner in = new Scanner(comPort.getInputStream());
