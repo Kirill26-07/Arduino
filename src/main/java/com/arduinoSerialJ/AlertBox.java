@@ -27,8 +27,7 @@ public class AlertBox {
         alertWindow.add(lblMessage, BorderLayout.CENTER);
     }
 
-    public void display(){
+    public void display() {
         alertWindow.setVisible(true);
     }
-
 }
